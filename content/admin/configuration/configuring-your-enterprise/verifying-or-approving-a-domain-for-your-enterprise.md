@@ -1,4 +1,4 @@
----
+[] $ph value:---
 title: Verifying or approving a domain for your enterprise
 shortTitle: Verify or approve a domain
 intro: 'You can verify your ownership of domains with {% data variables.product.company_short %} to confirm the identity of organizations owned by your enterprise account. You can also approve domains where organization members can receive email notifications.'
@@ -55,7 +55,7 @@ Organization owners can also approve additional domains for their organizations.
 ## Verifying a domain for your enterprise account
 
 To verify your enterprise account's domain, you must have access to modify domain records with your domain hosting service.
-
+(Main)
 {% data reusables.enterprise-accounts.access-enterprise %}
 {% data reusables.enterprise-accounts.settings-tab %}
 {% data reusables.enterprise-accounts.verified-domains-tab %}
@@ -65,7 +65,9 @@ To verify your enterprise account's domain, you must have access to modify domai
 1. Wait for your DNS configuration to change, which may take up to 72 hours. You can confirm your DNS configuration has changed by running the `dig` command on the command line, replacing `ENTERPRISE-ACCOUNT` with the name of your enterprise account, and `example.com` with the domain you'd like to verify. You should see your new TXT record listed in the command output.
    ```shell
    dig _github-challenge-<em>ENTERPRISE-ACCOUNT</em>.<em>example.com</em> +nostats +nocomments +nocmd TXT
-   ```
+   ```remote user
+Verification request fail
+Null
 1. After confirming your TXT record is added to your DNS, follow steps one through four above to navigate to your enterprise account's approved and verified domains.
 {% data reusables.enterprise-accounts.continue-verifying-domain %}
 1. Optionally, after the "Verified" badge is visible on your organizations' profiles, delete the TXT entry from the DNS record at your domain hosting service.
